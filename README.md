@@ -20,8 +20,8 @@ RepoResponse: A response object containing the list of popular repositories and 
 # Usage
 To use this endpoint, make a GET request to /api/repositories/popular with the required and optional query parameters. For example:
 
-'''http
+```http
 GET /api/repositories/popular?creating-date=2022-01-01&page=1&size=10&language=Java
-'''
+```
 
 This request will fetch popular repositories created since January 1, 2022, on the first page, with up to 10 repositories per page, filtered to those written in Java.
