@@ -26,7 +26,7 @@ public class RepoController {
     public RepoResponse getPopularRepositories(
             @RequestParam(defaultValue = Constants.DEFAULT_PAGE_NUMBER) Integer page,
             @RequestParam(defaultValue = Constants.DEFAULT_SIZE) Integer size,
-            @RequestParam(name = "creating-date") @NotEmpty(message = Constants.CREATING_DATE) String creatingDate,
+            @RequestParam(name = "created-date") @NotEmpty(message = Constants.CREATING_DATE) String creatingDate,
             @RequestParam(required = false) String language) {
         return repoService.getPopularRepositories(GetRepoRequest.builder().page(page).size(size)
                 .creatingDate(creatingDate).language(language).build());

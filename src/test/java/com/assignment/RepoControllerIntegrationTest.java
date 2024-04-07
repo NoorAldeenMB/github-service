@@ -28,7 +28,7 @@ class RepoControllerIntegrationTest {
         mockMvc.perform(get("/api/repositories/popular")
                         .param("page", DEFAULT_PAGE_NUMBER.toString())
                         .param("size", DEFAULT_SIZE.toString())
-                        .param("creating-date", "2022-01-01"))
+                        .param("created-date", "2022-01-01"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType("application/json"))
                 .andExpect(jsonPath("$.items").exists());

@@ -11,7 +11,7 @@ Retrieves a list of popular repositories filtered by the creation date and optio
 # Parameters
 #### page (Integer, optional): The page number of the repository list (for pagination). Default is 0.
 #### size (Integer, optional): The number of repositories to return per page. Default is 10.
-#### creating-date (String, required): The date from which to fetch popular repositories. The date should be in a format (typically yyyy-MM-dd).
+#### created-date (String, required): The date from which to fetch popular repositories. The date should be in a format (typically yyyy-MM-dd).
 #### language (String, optional): The programming language to filter the repositories. If omitted, repositories of all languages are included.
 
 ### Response
@@ -21,7 +21,7 @@ RepoResponse: A response object containing the list of popular repositories and 
 To use this endpoint, make a GET request to /api/repositories/popular with the required and optional query parameters. For example:
 
 ```http
-GET /api/repositories/popular?creating-date=2022-01-01&page=1&size=10&language=Java
+GET /api/repositories/popular?created-date=2022-01-01&page=1&size=10&language=Java
 ```
 
 This request will fetch popular repositories created since January 1, 2022, on the first page, with up to 10 repositories per page, filtered to those written in Java.
