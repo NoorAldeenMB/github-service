@@ -1,10 +1,13 @@
 package com.assignment.Model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonAlias;
+import lombok.Data;
+
 import java.util.List;
 
 
+@Data
 public class RepoResponse {
-    @JsonProperty("items")
+    @JsonAlias("items")
     private List<Repository> repositories;
 }

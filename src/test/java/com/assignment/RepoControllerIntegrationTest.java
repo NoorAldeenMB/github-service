@@ -31,7 +31,7 @@ class RepoControllerIntegrationTest {
                         .param("created-date", "2022-01-01"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType("application/json"))
-                .andExpect(jsonPath("$.items").exists());
+                .andExpect(jsonPath("$.repositories").exists());
     }
 
     @Test
