@@ -5,6 +5,7 @@ import lombok.*;
 
 
 @Getter
+@ToString
 public class Repository {
     private Long id;
     private String name;
